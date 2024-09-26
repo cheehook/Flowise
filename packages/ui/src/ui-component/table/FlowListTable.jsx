@@ -140,7 +140,7 @@ export const FlowListTable = ({ data, images, isLoading, filterFunction, updateF
                         <TableRow>
                             <StyledTableCell component='th' scope='row' style={{ width: '25%' }} key='0'>
                                 <TableSortLabel active={orderBy === 'name'} direction={order} onClick={() => handleRequestSort('name')}>
-                                    Name
+                                    Project Name
                                 </TableSortLabel>
                             </StyledTableCell>
                             <StyledTableCell style={{ width: '25%' }} key='1'>
@@ -153,7 +153,7 @@ export const FlowListTable = ({ data, images, isLoading, filterFunction, updateF
                                 </TableSortLabel>
                             </StyledTableCell>
                             <StyledTableCell style={{ width: '20%' }} key='2'>
-                                Sandbox 
+                                Sandbox Status
                             </StyledTableCell>
                             <StyledTableCell style={{ width: '25%' }} key='3'>
                                 <Stack
