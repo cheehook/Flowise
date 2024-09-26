@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 // material-ui
 import { styled, useTheme } from '@mui/material/styles'
-import { AppBar, Box, CssBaseline, Toolbar, useMediaQuery } from '@mui/material'
+import { AppBar, Box, Chip, CssBaseline, Toolbar, useMediaQuery } from '@mui/material'
 
 // project imports
 import Header from './Header'
@@ -92,12 +92,25 @@ const MainLayout = () => {
             </AppBar>
 
             {/* drawer */}
-            <Sidebar drawerOpen={leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
+            {/* <Sidebar drawerOpen={leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} /> */}
 
             {/* main content */}
             <Main theme={theme} open={leftDrawerOpened}>
                 <Outlet />
+                <Box
+                    sx={{
+                        position: 'fixed',
+                        bottom: 16, // distance from the bottom of the page
+                        right: 16, // distance from the right side of the page
+                        zIndex: 1000 // make sure it appears above other elements if needed
+                    }}
+                >
+                    <a href="https://flowiseai.com" target="_blank" style={{ textDecoration: 'none' }}>
+                        FlowiseAI
+                    </a>
+                </Box>
             </Main>
+
         </Box>
     )
 }

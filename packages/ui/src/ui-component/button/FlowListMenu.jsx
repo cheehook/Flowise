@@ -347,10 +347,10 @@ export default function FlowListMenu({ chatflow, isAgentCanvas, setError, update
                     <FileDownloadIcon />
                     Export
                 </MenuItem>
-                <MenuItem onClick={handleExportTemplate} disableRipple>
+                {/* <MenuItem onClick={handleExportTemplate} disableRipple>
                     <ExportTemplateOutlinedIcon />
                     Save As Template
-                </MenuItem>
+                </MenuItem> */}
                 <Divider sx={{ my: 0.5 }} />
                 <MenuItem onClick={handleRunSandbox} disableRipple>
                     <PlayCircleOutlineIcon />
