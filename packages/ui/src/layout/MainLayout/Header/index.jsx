@@ -73,7 +73,8 @@ const Header = ({ handleLeftDrawerToggle }) => {
 
     const customization = useSelector((state) => state.customization)
 
-    const [isDark, setIsDark] = useState(customization.isDarkMode)
+    // const [isDark, setIsDark] = useState(customization.isDarkMode)
+    const [isDark, setIsDark] = useState(false)
     const dispatch = useDispatch()
 
     const changeDarkMode = () => {

@@ -43,7 +43,7 @@ const Opeaflows = () => {
     const [loginDialogProps, setLoginDialogProps] = useState({})
 
     const getAllOpeaflowsApi = useApi(chatflowsApi.getAllOpeaflows)
-    const [view, setView] = useState(localStorage.getItem('flowDisplayStyle') || 'card')
+    const [view, setView] = useState(localStorage.getItem('flowDisplayStyle') || 'list')
 
     const handleChange = (event, nextView) => {
         if (nextView === null) return
